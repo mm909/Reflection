@@ -1,18 +1,24 @@
-let users = {
+let user = {
   "_id": "UNIQUEID",
-  "name": "example",
-  "numreflections": 3
+  "name": "Mikian",
+  "numreflections": 3,
+  "numAnswers" : 6,
+  "settings": {
+    "x" : X,
+    "y" : Y
+   }
 }
 
-let reflections = {
+let reflection = {
   "_id": "UNIQUEID",
   "user_id": "UNIQUEUSERID",
-  "numanswers": 2,
+  "numAnswers" : 2,
   "time": {
     "date": "2016-05-18T16:00:00Z",
     "offset": 420
   },
-  "answers": [{
+  "answers": [
+    {
       "question": "Something good:",
       "question_id": 0,
       "answertext": "I learned alot."
@@ -25,14 +31,15 @@ let reflections = {
   ]
 }
 
-let questions = {
+let question = {
   "_id": "UNIQUEID",
-  "text": "Something good:"
+  "text": "Something good:",
+  "numberOfTimesAnswered" : 2
 }
 
-// Using date and offset
-// https://docs.mongodb.com/manual/tutorial/model-time-data/
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 
-// One to many relationships
-// https://docs.mongodb.com/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/
+
+
+
+
+//eof
