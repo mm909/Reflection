@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test FireBase</title>
+    <!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-functions.js"></script>
+
+<!-- Comment out (or don't include) services that you don't want to use -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-storage.js"></script> -->
+
+<script>
+  let config = {
+    apiKey: "AIzaSyAlFjOjEC-oxO60VpqiREJ6aYhHdFFbZ9Q",
+    authDomain: "reflectiontestdatabase.firebaseapp.com",
+    databaseURL: "https://reflectiontestdatabase.firebaseio.com",
+    projectId: "reflectiontestdatabase",
+    storageBucket: "reflectiontestdatabase.appspot.com",
+    messagingSenderId: "287203066341",
+  };
+  firebase.initializeApp(config);
+  const firestore = firebase.firestore();
+  const settings = { timestampsInSnapshots: true};
+  firestore.settings(settings);
+  console.log(firebase);
+</script>
+    <script src="fb.js"></script>
+  </head>
+  <body style="background-color:#eee">
+    <textarea id="textForSubmit" name="name" rows="8" cols="80"></textarea>
+    <button id="submitButton" onClick="submitClick()" type="button" name="button">Submit</button>
+  </body>
+</html>
